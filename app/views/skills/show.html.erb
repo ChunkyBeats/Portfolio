@@ -1,0 +1,11 @@
+<% content_for(:name, "Skill | Portfolio") %>
+
+<h1><%= @skill.name %></h1>
+<h3><%= @skill.description %></h3>
+
+
+<p><%= link_to "Edit Skill", edit_skill_path(@skill) %></p>
+<p><%= link_to "Remove this skill", skill_path(@skill),
+                  :data => {:confirm => "For reals?",
+                            :method => "delete"} %></p>
+<p><%= link_to "Return to Skills", skills_path %></p>

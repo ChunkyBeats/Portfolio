@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <header class="navbar navbar-static-top navbar-inverse">
+      <div class="navbar-inner">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/skills">View My Skills</a></li>
+            <li><a href="/skills/new">Add a Skill</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+          </ul>
+      </div>
+    </header>
+
+    <div class"container">
+      <%= yield %>
+    </div>
+
+  </body>
+</html>
