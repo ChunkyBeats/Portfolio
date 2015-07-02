@@ -1,28 +1,49 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Portfolio-olio
+==========
 
-Things you may want to cover:
+    by
 
-* Ruby version
+Cory Ribson
+===========
 
-* System dependencies
+REQUIREMENTS
+============
 
-* Configuration
+Rails v 4.2.1 & POSTGRES v. 9.4.1
 
-* Database creation
+INSTALLATION
+============
 
-* Database initialization
+Run command $ postgres in terminal.
 
-* How to run the test suite
+In Bash run: $ bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+$ rake db:create   \
+                    |--> Maybe?
+$ rake db:migrate  /
 
-* Deployment instructions
+$ rails server
 
-* ...
+In your browser go to: localhost:3000
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ABOUT
+=====
+
+An ever evolving Portfolio, designed to be tailored to my skills and projects
+in Computer Programming.
+
+COPYRIGHT 2015
+==============
+
+LICENSING
+=========
+
+Don't steal my stuff.
+
+KNOWN BUGS
+==========
+
+None
