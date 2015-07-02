@@ -7,6 +7,6 @@
   <%= f.text_field :description %>
   <%= f.label :link %>
   <%= f.text_field :link %>
-  <%= collection_check_boxes(:project, :skill_ids, Skill.all, :id, :name) %>
+  <%= collection_check_boxes(:project, :skill_ids, @skills, :id, :name) %>
   <%= f.submit %>
 <% end %>

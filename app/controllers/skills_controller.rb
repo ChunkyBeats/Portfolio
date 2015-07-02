@@ -10,6 +10,7 @@ class SkillsController < ApplicationController
   def create
     @skill = Skill.new(skill_params)
     if @skill.save
+      flash[:alert] = "LEARNING, YES!!"
       redirect_to skills_path
     else
       render :new

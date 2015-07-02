@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    # @skill = Skill.find(params[:skill_id])
+    @skills = Skill.all
     @project = Project.new
   end
 
@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
     # @project = @skill.projects.new(project_params)
     @project = Project.new(project_params)
     if @project.save
+      flash[:alert] = "MAKE ALL THE THINGS!"
       redirect_to projects_path
     else
       render :new
@@ -25,6 +26,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @skills = Skill.all
     @project = Project.find(params[:id])
   end
 
