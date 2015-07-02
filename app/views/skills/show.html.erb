@@ -1,11 +1,25 @@
-<% content_for(:name, "Skill | Portfolio") %>
+<% content_for(:title, "Skill | Portfolio") %>
 
-<h1><%= @skill.name %></h1>
-<h3><%= @skill.description %></h3>
+<div class="block">
+  <h1><%= @skill.name %></h1>
+  <p><%= @skill.description %></p>
 
+  <% if @skill.projects.any? %>
+    <h4>Projects include:</h4>
+    <ul>
+      <% @skill.projects.each do |project| %>
+        <li><% project.name %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
-<p><%= link_to "Edit Skill", edit_skill_path(@skill) %></p>
-<p><%= link_to "Remove this skill", skill_path(@skill),
-                  :data => {:confirm => "For reals?",
-                            :method => "delete"} %></p>
-<p><%= link_to "Return to Skills", skills_path %></p>
+</div>
+<div class="block path">
+
+  <p><%= link_to "Add a Project", new_project_path %></p>
+  <p><%= link_to "Edit Skill", edit_skill_path(@skill) %></p>
+  <p><%= link_to "Remove this skill", skill_path(@skill),
+                    :data => {:confirm => "For reals?",
+                              :method => "delete"} %></p>
+  <p><%= link_to "Return to Skills", skills_path %></p>
+<div>

@@ -1,0 +1,10 @@
+<h1>Projects:</h1>
+
+<div class="col-sm-8">
+  <ul>
+    <% @projects.each do |project| %>
+      <li><%= link_to project.name, project_path(project) %></li>
+    <% end %>
+  </ul>
+
+</div>
