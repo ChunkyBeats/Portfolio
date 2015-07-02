@@ -2,8 +2,8 @@
 
 <div class="block">
   <h1><%= @project.name %></h1>
-  <p><%= @project.description %></p>
-  <p><%= @project.link %></p>
+  <p>Description: <%= @project.description %></p>
+  <p>Link to: <%= @project.link %></p>
 
   <% if @project.skills.any? %>
     <h4>Skills used in this Project:</h4>

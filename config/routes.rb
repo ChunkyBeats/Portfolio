@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'skills#index'
+  root 'home#index'
 
   resources :skills
   resources :projects
