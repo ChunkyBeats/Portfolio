@@ -24,6 +24,22 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    @project.update(project_params)
+    skills = params[:project][:skill_ids]
+    skills.each do |skill|
+      if skill != ""
+        @project.skills.push(Skill.find(skill))
+      end
+    end
+    redirect_to project_path(@project)
+  end
+
   def destroy
     @project = Project.find(params[:id])
     @project.destroy

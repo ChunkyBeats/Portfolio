@@ -3,16 +3,17 @@
 <div class="block">
   <h1><%= @project.name %></h1>
   <p>Description: <%= @project.description %></p>
-  <p>Link to: <%= @project.link %></p>
+  <p>Link: <%= link_to @project.link, @project.link %></p>
 
   <% if @project.skills.any? %>
     <h4>Skills used in this Project:</h4>
     <ul>
       <% @project.skills.each do |skill| %>
-        <li><% skill.name %></li>
+        <li><%= skill.name %></li>
       <% end %>
     </ul>
   <% end %>
+
 
 </div>
 <div class="block path">
