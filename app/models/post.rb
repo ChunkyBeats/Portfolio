@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :body
 
-  def timeRegistered
+  def timePosted
     time_elapsed = (Time.now - self.created_at).to_i
     if time_elapsed < 60
       time_unit = "seconds"

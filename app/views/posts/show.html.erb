@@ -1,0 +1,10 @@
+<% content_for(:title, "Post | Portfolio") %>
+
+<div class="block">
+  <h1><%= @post.title %></h1>
+  <h5>Written by: <%= @post.user.username %></h5>
+  <p><%= @post.body %></p><br>
+
+  <i>Posted <%= @post.timePosted %> ago.</i>
+
+</div>

@@ -1,0 +1,11 @@
+<h1>Posts:</h1>
+
+<div class="col-sm-8">
+  <ul>
+    <% @posts.each do |post| %>
+      <li><%= link_to post.title, post_path(post) %></li>
+          &nbsp&nbsp - written by <%= post.user.username %>
+    <% end %>
+  </ul>
+
+</div>

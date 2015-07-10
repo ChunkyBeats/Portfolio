@@ -6,6 +6,10 @@ class PostsController < ApplicationController
   def new
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def create
     post = current_user.posts.new(post_params)
     if post.save
