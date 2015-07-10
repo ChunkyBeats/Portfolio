@@ -20,9 +20,9 @@ Run command $ postgres in terminal.
 
 In Bash run: $ bundle install
 
-$ rake db:create   \
-                    |--> Maybe?
-$ rake db:migrate  /
+$ rake db:create
+
+$ rake db:migrate
 
 $ rails server
 
@@ -46,7 +46,8 @@ Don't steal my stuff.
 KNOWN BUGS
 ==========
 
-Admin status must be hardcoded into the database.
+Admin status must be hardcoded into the database. --> THIS CAUSES ISSUES WITH TESTING
+
 Page breaks when adding a new project but no link is given.
 Formatting fails on homepage with certain screen resolutions, something to do
   with the Bootstrap columns.
