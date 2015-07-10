@@ -14,9 +14,11 @@
             <li><a href="/">Home</a></li>
             <li><a href="/skills">View My Skills</a></li>
             <li><a href="/projects">View My Projects</a></li>
+            <li><%= link_to 'Posts', posts_path %></li>
             <% if current_user.try(:admin?) %>
               <li><a href="/skills/new">Add a Skill</a></li>
               <li><a href="/projects/new">Add a Project</a></li>
+              <li><%= link_to 'Create New Post', new_post_path %></li>
             <% end %>
           </ul>
 

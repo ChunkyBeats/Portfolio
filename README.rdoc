@@ -46,6 +46,7 @@ Don't steal my stuff.
 KNOWN BUGS
 ==========
 
+Admin status must be hardcoded into the database.
 Page breaks when adding a new project but no link is given.
 Formatting fails on homepage with certain screen resolutions, something to do
   with the Bootstrap columns.
