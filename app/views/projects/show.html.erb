@@ -17,10 +17,11 @@
 
 </div>
 <div class="block path">
-
-  <p><%= link_to "Edit Project", edit_project_path(@project) %></p>
-  <p><%= link_to "Remove this project", project_path(@project),
-                    :data => {:confirm => "For reals?",
-                              :method => "delete"} %></p>
+  <% if current_user.try(:admin?) %>
+    <p><%= link_to "Edit Project", edit_project_path(@project) %></p>
+    <p><%= link_to "Remove this project", project_path(@project),
+                      :data => {:confirm => "For reals?",
+                                :method => "delete"} %></p>
+  <% end %>
   <p><%= link_to "Return to Projects", projects_path %></p>
 <div>
