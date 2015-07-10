@@ -43,6 +43,10 @@ LICENSING
 
 Don't steal my stuff.
 
+HEROKU
+======
+Pushed to Heroku @ : https://limitless-woodland-1691.herokuapp.com
+
 KNOWN BUGS
 ==========
 
