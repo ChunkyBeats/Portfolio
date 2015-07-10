@@ -10,10 +10,14 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    # @skill = Skill.find(params[:skill_id])
-    # @project = @skill.projects.new(project_params)
     @project = Project.new(project_params)
     if @project.save
+      skills = params[:project][:skill_ids]
+      skills.each do |skill|
+        if skill != ""
+          @project.skills.push(Skill.find(skill))
+        end
+      end
       flash[:alert] = "MAKE ALL THE THINGS!"
       redirect_to projects_path
     else
