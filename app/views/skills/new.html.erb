@@ -1,3 +1,7 @@
-<h1>Add a Skill to your Awesomeness</h1>
+<% if current_user.try(:admin?) %>
+  <h1>Add a Skill to your Awesomeness</h1>
 
-<%= render "layouts/form" %>
+  <%= render "layouts/form" %>
+<% else %>
+  You must be an Admin to create a skill.
+<% end %>

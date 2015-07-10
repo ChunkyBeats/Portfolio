@@ -12,9 +12,9 @@
       <div class="navbar-inner">
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
+            <li><%= link_to 'Blog', posts_path %></li>
             <li><a href="/skills">View My Skills</a></li>
             <li><a href="/projects">View My Projects</a></li>
-            <li><%= link_to 'Posts', posts_path %></li>
             <% if current_user.try(:admin?) %>
               <li><a href="/skills/new">Add a Skill</a></li>
               <li><a href="/projects/new">Add a Project</a></li>
