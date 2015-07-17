@@ -41,7 +41,7 @@ COPYRIGHT 2015
 LICENSING
 =========
 
-Don't steal my stuff.
+Yes.
 
 HEROKU
 ======
@@ -52,6 +52,9 @@ KNOWN BUGS
 
 Admin status must be hardcoded into the database. --> THIS CAUSES ISSUES WITH TESTING
 
-Page breaks when adding a new project but no link is given.
 Formatting fails on homepage with certain screen resolutions, something to do
 with the Bootstrap columns.
+Add a Reference button fails to hide on reference submit.
+Can't display user name for References.
+
+So pretty much it's working as intended!!
