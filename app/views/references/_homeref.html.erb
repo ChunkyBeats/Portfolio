@@ -1,0 +1,12 @@
+
+<button id="close_references" class="btn btn-primary">Close References</button>
+<div class="refbody">
+  <hr>
+  <div class="references", id="references">
+    <%= render @references %>
+  </div>
+  <hr>
+  <% if current_user %>
+    <%= link_to 'Add Reference', new_reference_path, id: 'new_reference_link', remote: true, class: "btn btn-success" %>
+  <% end %>
+</div>

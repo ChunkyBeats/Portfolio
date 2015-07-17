@@ -1,0 +1,7 @@
+<%= form_for @reference, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :endorsement, "Add a reference!" %>
+    <%= f.text_field :endorsement %>
+  </div>
+  <%= f.submit "Submit", class: "btn btn-success"%>
+<% end %>

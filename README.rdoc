@@ -1,7 +1,7 @@
 == README
 
 Portfolio-olio
-==========
+==============
 
     by
 
@@ -54,4 +54,4 @@ Admin status must be hardcoded into the database. --> THIS CAUSES ISSUES WITH TE
 
 Page breaks when adding a new project but no link is given.
 Formatting fails on homepage with certain screen resolutions, something to do
-  with the Bootstrap columns.
+with the Bootstrap columns.

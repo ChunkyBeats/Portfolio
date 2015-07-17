@@ -1,0 +1,7 @@
+$('#references_link').hide('slow').after('<%= j render("homeref") %>');
+
+$('#close_references').on("click", function() {
+  $('#close_references').hide('slow');
+  $('.refbody').hide('slow');
+  $('#references_link').show('slow');
+});
