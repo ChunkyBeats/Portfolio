@@ -10,21 +10,13 @@
 
 <hr>
 <% if current_user %>
-  <%= form_for [@post, @comment] do |f| %>
-    <div class="form-group">
-      <%= f.label :body, "Add a comment!" %>
-      <%= f.text_field :body %>
-    </div>
-    <%= f.submit "Respond", class: "btn btn-success"%>
-  <% end %>
+  <%= link_to 'Add a Comment', new_post_comment_path(@post), id: 'new_post_comment_link', remote: true, class: 'btn btn-success' %>
 <% end %>
 <hr>
-<ul>
-  <% @post.comments.each do |comment| %>
-    <%= comment.user.username %> responded:<br>
-    <li class="buffer"><%= comment.body %></li><hr>
-  <% end %>
-</ul>
+
+<div id="comments">
+  <%= render @comments %>
+</div>
 
 
 <p><%= link_to "Return to Posts", posts_path %></p>

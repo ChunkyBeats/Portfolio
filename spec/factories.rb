@@ -3,5 +3,6 @@ FactoryGirl.define do
     username('robotsscareme')
     email('bleh@test.com')
     password('gobbledegook')
+    admin(true)
   end
 end

@@ -1,16 +1,18 @@
 class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
-    @comment = Comment.new(comment_params)
+    @comment = Comment.create!(comment_params)
     @post.comments << @comment
     current_user.comments << @comment
-    if @comment.save
-      flash[:notice] = "Comment successfully posted!"
-      redirect_to post_path(@post)
-    else
-      flash[:alert] = "Must provide a comment"
-      redirect_to :back
+    respond_to do |format|
+      format.html { redirect_to project_path(@project) }
+      format.js
     end
+  end
+
+  def new
+    @post = Post.find(params[:post_id])
+    @comment = Comment.new
   end
 
   private
